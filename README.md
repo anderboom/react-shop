@@ -1,6 +1,6 @@
 # Simple React Shop App
 
-This project was published [React Shop App](https://anderboom.github.io/react-shop/).
+[Demo](https://anderboom.github.io/react-shop/).
 
 ## Available Scripts
 
