@@ -1,6 +1,6 @@
 # Simple React Shop App
 
-[Demo](https://anderboom.github.io/react-shop/).
+[Demo](https://anderboom.github.io/react-shop/)
 
 ## Available Scripts
 
