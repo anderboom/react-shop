@@ -4,7 +4,12 @@ function Footer() {
       <div className='footer-copyright'>
         <div className='container'>
           © {new Date().getFullYear()} Copyright
-          <a className='grey-text text-lighten-4 right' href='#!'>
+          <a
+            className='grey-text text-lighten-4 right'
+            href='https://github.com/anderboom/react-shop'
+            target='_blank'
+            rel='noopener noreferrer'
+          >
             Repozitory
           </a>
         </div>
