@@ -1,7 +1,14 @@
-import { useEffect } from 'react';
+import {
+  useContext,
+  useEffect,
+} from 'react';
 
-function Toast(props) {
-  const { name = '', closeToast = Function.prototype } = props;
+import { ShopContext } from '../context';
+
+function Toast() {
+  const { toast: name = '', closeToast = Function.prototype } =
+    useContext(ShopContext);
+
   useEffect(() => {
     const timerId = setTimeout(closeToast, 2000);
     return () => {

@@ -1,13 +1,11 @@
+import { useContext } from 'react';
+
+import { ShopContext } from '../context';
 import { CartItem } from './CartItem';
 
-function CartList(props) {
-  const {
-    order = [],
-    handleCartShow = Function.prototype,
-    removeFromCart = Function.prototype,
-    incQuantity = Function.prototype,
-    decQuantity = Function.prototype,
-  } = props;
+function CartList() {
+  const { order = [], handleCartShow = Function.prototype } =
+    useContext(ShopContext);
 
   const totalCost = order.reduce((sum, el) => {
     return sum + el.price * el.quantity;
@@ -23,21 +21,13 @@ function CartList(props) {
       </li>
 
       {order.length ? (
-        order.map((item) => (
-          <CartItem
-            key={item.id}
-            {...item}
-            removeFromCart={removeFromCart}
-            incQuantity={incQuantity}
-            decQuantity={decQuantity}
-          />
-        ))
+        order.map((item) => <CartItem key={item.id} {...item} />)
       ) : (
         <li className='collection-item'>Cart is empty</li>
       )}
       <li className='collection-item active cart-footer'>
         <span className='cart-total-cost'>Total cost: {totalCost} UAH</span>
-        <button className='secondary-content btn cart-checkout-btn'>
+        <button className='secondary-content btn cart-confirm-btn'>
           Confirm
         </button>
       </li>
